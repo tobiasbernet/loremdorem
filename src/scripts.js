@@ -3,8 +3,8 @@ var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 var res = lorem.split("");
 var text = "";
 var i;
-var backgroundColors = ["#FFFF00", "#1919A6", "#2121DE"];
-var foregroundColors = ["#DEA185", "#FD0000", "#00FF00"];
+var backgroundColors = ["#2121DE"];
+var foregroundColors = ["#FD0000"];
 
 for (i = 0; i < res.length; i++) {
   text += "<span>" + res[i] + "</span>";
