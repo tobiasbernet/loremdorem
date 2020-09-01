@@ -1,2 +1,2 @@
 [build]
-command = "sass --watch src/styles.scss src/build/styles.css"
+command = "npm install -g sass && sass --watch src/styles.scss src/build/styles.css"
