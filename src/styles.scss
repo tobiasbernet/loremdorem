@@ -1,0 +1,56 @@
+$animationDuration: 0.04s;
+$animationInterval: 0.04s;
+$maxWidth: 288px;
+$maxHeight: 200px;
+
+/* The animation code */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin transition {
+  @for $i from 1 through 445 {
+    &:nth-child(#{$i}) {
+      animation-delay: $animationInterval * $i;
+    }
+  }
+  color: #FFFFFF;
+  opacity: 0;
+  animation: fade;
+  animation-duration: $animationDuration;
+  animation-fill-mode: forwards;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+span {
+  @include transition;
+}
+
+#lorem {
+  max-width: $maxWidth;
+  max-height: $maxHeight;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -$maxHeight/2;
+  margin-left: -$maxWidth/2;
+  padding: 0.5em;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+}
