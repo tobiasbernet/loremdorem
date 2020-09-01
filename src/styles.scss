@@ -1,5 +1,6 @@
 $animationDuration: 0.04s;
 $animationInterval: 0.04s;
+$loremLength: 123;
 $maxWidth: 288px;
 $maxHeight: 200px;
 
@@ -14,7 +15,7 @@ $maxHeight: 200px;
 }
 
 @mixin transition {
-  @for $i from 1 through 445 {
+  @for $i from 1 through $loremLength {
     &:nth-child(#{$i}) {
       animation-delay: $animationInterval * $i;
     }
