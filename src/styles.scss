@@ -1,5 +1,5 @@
-$animationDuration: 0.04s;
-$animationInterval: 0.04s;
+$animationDuration: 0.08s;
+$animationInterval: 0.08s;
 $loremLength: 123;
 $maxWidth: 288px;
 $maxHeight: 200px;
@@ -44,6 +44,16 @@ span {
   margin-top: -$maxHeight/2;
   margin-left: -$maxWidth/2;
   padding: 0.5em;
+}
+
+.secondStage{
+    background-color: white;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
 }
 
 #footer {
